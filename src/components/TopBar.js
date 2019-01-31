@@ -1,7 +1,12 @@
 import React from 'react';
 
-const TopBar = () => {
-  return <div>TopBar</div>;
+const TopBar = props => {
+  return (
+    <div>
+      <span>Score {props.score}</span>
+      <span>Top Score{props.topScore}</span>
+    </div>
+  );
 };
 
 export default TopBar;
