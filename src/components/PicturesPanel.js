@@ -1,16 +1,15 @@
 import React from 'react';
-import characters from '../characters.json';
 import PictureItem from './PictureItem';
 
-const PicturesPanel = props => {
-  const renderedPictures = characters.map(character => {
+const PicturesPanel = ({ images, onHandleSuffle }) => {
+  const renderedPictures = images.map(image => {
     return (
       <PictureItem
-        key={character.id}
-        name={character.name}
-        picture={character.image}
-        handleIncrement={props.handleIncrement}
-        handleTopScore={props.handleTopScore}
+        key={image.id}
+        id={image.id}
+        name={image.name}
+        image={image.image}
+        onHandleSuffle={onHandleSuffle}
       />
     );
   });

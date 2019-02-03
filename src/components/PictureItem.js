@@ -1,20 +1,9 @@
 import React from 'react';
 
-const PictureItem = ({
-  picture,
-  name,
-  handleIncrement,
-  handleTopScore,
-  key
-}) => {
+const PictureItem = ({ image, name, onHandleSuffle, id }) => {
   return (
     <div>
-      <img
-        src={picture}
-        alt={name}
-        onClick={() => handleIncrement(picture)}
-        onSubmit={() => handleTopScore(key)}
-      />
+      <img src={image} alt={name} onClick={() => onHandleSuffle(id)} />
     </div>
   );
 };
